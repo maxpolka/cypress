@@ -21,7 +21,7 @@ describe('Уведомления', () => {
 
           cy.log('Вход в уведомления')
           .wait(1000)
-          cy.get('.router-link-active > .header__label')
+          cy.get('[href="/notification"] > .header__label')
           .click()
 
           cy.log("Посмотреть подробности")

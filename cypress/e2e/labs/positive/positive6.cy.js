@@ -22,13 +22,13 @@ describe('Потребности', () => {
           cy.get(':nth-child(6) > .menu-item__item-name')
               .click();
 
-          cy.log('Переход к создании потребности');
+          cy.log('Создание потребности');
           cy.get('.needs-block__filters-wrapper > .button')
               .click();
           
-          cy.log('Вписываем название потребности');
+          cy.log('Название потребности');
           cy.get('.desktop-modal__content > .vacancy-need-wrapper > .form > :nth-child(1) > .form__labels > .labels > :nth-child(1) > .form-control--responsive > .form-input--text')
-              .type('Кладовщик', {force: true});
+              .type('Питонист', {force: true});
     
           cy.log('Заработная плата')
           cy.get('.desktop-modal__content > .vacancy-need-wrapper > .form > :nth-child(1) > .form__labels > .labels > :nth-child(2) > .salary-field > .salary-field__wrapper--bottom > .radio-list > :nth-child(2) > .radio-component__label')
@@ -36,11 +36,11 @@ describe('Потребности', () => {
       
           cy.log('Обязанности')
           cy.get('.desktop-modal__content > .vacancy-need-wrapper > .form > :nth-child(1) > .form__labels > .labels > :nth-child(3) > .form-control > .form-area')
-              .type('кладовщик');
+              .type('Питонист');
 
           cy.log('Требования')
           cy.get('.desktop-modal__content > .vacancy-need-wrapper > .form > :nth-child(1) > .form__labels > .labels > :nth-child(4) > .form-control > .form-area')
-              .type('Уметь все делать');
+              .type('Знать питон (так нада)');
 
           cy.log('Тип занятости')
           cy.get('.desktop-modal__content > .vacancy-need-wrapper > .form > :nth-child(1) > .form__labels > .labels > :nth-child(5) > .form-select > :nth-child(2) > .form-select__selected')

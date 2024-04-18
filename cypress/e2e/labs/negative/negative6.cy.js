@@ -13,11 +13,11 @@ describe('Регистрация', () => {
 
             cy.log('Имя');
             cy.get(':nth-child(1) > :nth-child(1) > .form-control--medium > .form-input--text')
-                .type('Иван')
+                .type('Иванов')
 
             cy.log('Email');
             cy.get('.form-input--email')
-                .type('ivan228.com')
+                .type('maximivanov@gmail.com')
 
             cy.log('Пароль');
             cy.get(':nth-child(3) > .form-control--medium > .form-input--password')

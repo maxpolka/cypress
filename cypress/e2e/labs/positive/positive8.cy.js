@@ -29,7 +29,7 @@ describe('авторизация', () => {
           .click()
 
           cy.log('Откликнуться')
-          cy.get('.card-main__button-flag')
+          cy.get(':nth-child(1) > .internship-item__info-wrapper > .internship-item__footer-wrapper > .vacancy-footer > .vacancy-footer__button-wrapper > .button__background-color-green')
           .click()
 
           })

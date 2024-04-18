@@ -6,15 +6,13 @@ describe('Негативный сценарий авторизации', () => {
           cy.visit(data.login_url);
 
           cy.log('Ввод некорректного логина');
-          cy.get('.form-input--text').type('неверныйлогин');
+          cy.get('.form-input--text').type('тест');
 
           cy.log('Ввод некорректного пароля');
-          cy.get('.form-input--password').type('неверныйпароль');
+          cy.get('.form-input--password').type('неверныйТест');
 
           cy.log('Клик по кнопке "Войти"');
           cy.get(':nth-child(3) > .button').click();
-
-          cy.log('Проверка отображения сообщения об ошибке');
       })
   })
 })

@@ -18,8 +18,9 @@ describe('Создание вакансии', () => {
               .click();
 
           cy.log('Переход к созданию вакансии')
-          cy.get('[data-v-21f0eb9c=""][data-v-4849dea2=""] > .vacancies-block > .vacancies-block__filters-wrapper > .button')
+          cy.get(':nth-child(7) > .menu-item__item-name')
               .click()
+          .wait(200)
 
           cy.log('Переход к созданию вакансии')
           cy.get('[data-v-21f0eb9c=""][data-v-4849dea2=""] > .vacancies-block > .vacancies-block__filters-wrapper > .button')

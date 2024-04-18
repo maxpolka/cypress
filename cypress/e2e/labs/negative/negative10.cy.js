@@ -18,7 +18,7 @@ describe('Поиск и фильтрация', () => {
             cy.get(':nth-child(3) > .radio-component__input')
                 .click()
 
-            cy.wait(4000)
+            cy.wait(2000)
             cy.get('div.search-input__field > .button')
                 .click()
 

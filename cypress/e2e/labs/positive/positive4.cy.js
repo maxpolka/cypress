@@ -8,13 +8,13 @@ describe('авторизация', () => {
   
             cy.log('Ввод логина');
             cy.get('.form-input--text')
-            .type(data.login4);
+            .type(data.login);
   
             cy.log('Ввод пароля');
             cy.get('.form-input--password')
-            .type(data.password4);
+            .type(data.password);
   
-            cy.log('Клик по кнопке "Войти"')
+            cy.log('Войти')
             cy.get(':nth-child(3) > .button')
             .click();
 
@@ -24,17 +24,17 @@ describe('авторизация', () => {
 
             cy.log('Выбор учреждения');
             cy.get('.desktop-modal__content > .student-form > .choose-institution > :nth-child(1) > [data-v-40f88df4=""] > .search-input > div.search-input__field > .form-input--text')
-                    .type('ттит') 
-                    .wait(2000) 
+            .type('ттит') 
+            .wait(1000) 
 
-                cy.get('.search-input__item')
-                    .first() 
-                    .click(); 
+            cy.get('.search-input__item')
+            .first() 
+            .click(); 
 
             cy.log('Выбрать специальность')
             cy.get('.desktop-modal__content > .student-form > .choose-specialty > [data-v-0dbb9e5f=""] > .search-input > div.search-input__field > .form-input--text')
-            .type('11.02.08 Средства связи с подвижными объектами')
-            .wait(2000)
+            .type('21.02.06 Информационные системы обеспечения градостроительной деятельности')
+            .wait(1000)
 
             cy.get('.search-input__item')
             .first() 
@@ -48,14 +48,14 @@ describe('авторизация', () => {
             cy.get('.desktop-modal__content > .student-form > .student-form__courses > .courses-list > :nth-child(3)')
             .click();
 
-            cy.log('Выбор года обучения от')
+            cy.log('Выбор года обучения')
             cy.get('.desktop-modal__content > .student-form > .student-form__years > :nth-child(1) > .form-control--max > .form-input--number')
             .click();
 
             cy.get('.desktop-modal__content > .student-form > .student-form__years > :nth-child(1) > .form-control--max > .form-input--number')
             .type('2022');
 
-            cy.log('Выбор года обучения до')
+            cy.log('Выбор года обучения')
 
             cy.get('.desktop-modal__content > .student-form > .student-form__years > :nth-child(2) > .form-control--max > .form-input--number')
             .click();
@@ -65,7 +65,7 @@ describe('авторизация', () => {
 
             cy.log('Создать заявку')
             cy.get('.desktop-modal__content > .student-form > .button')
-                    .click();
+            .click();
 
 
 

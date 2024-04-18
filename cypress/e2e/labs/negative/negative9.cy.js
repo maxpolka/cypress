@@ -6,11 +6,11 @@ describe('Заполнение управления над косвенными 
             cy.log('Переход на страницу авторизации')
             cy.visit(data.login_url)
 
-            cy.log('Ввод некорректного логина');
+            cy.log('Ввод логина');
             cy.get('.form-input--text')
                 .type(data.login3)
 
-            cy.log('Ввод некорректного пароля');
+            cy.log('Ввод пароля');
             cy.get('.form-input--password')
                 .type(data.password)
 

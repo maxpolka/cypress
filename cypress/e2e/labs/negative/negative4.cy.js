@@ -8,11 +8,11 @@ describe('Верификации', () => {
 
             cy.log('Ввод некорректного логина');
             cy.get('.form-input--text')
-                .type(data.login4)
+                .type(data.login)
 
             cy.log('Ввод некорректного пароля');
             cy.get('.form-input--password')
-                .type(data.password4)
+                .type(data.password)
 
             cy.log('Клик по кнопке "Войти"')
             cy.get(':nth-child(3) > .button')
@@ -25,7 +25,7 @@ describe('Верификации', () => {
             cy.log('Выбор учреждения');
             cy.get('.desktop-modal__content > .student-form > .choose-institution > :nth-child(1) > [data-v-40f88df4=""] > .search-input > div.search-input__field > .form-input--text')
                 .type('ттит')
-                .wait(2000)
+                .wait(1000)
 
             cy.get('.search-input__item')
                 .first()
@@ -33,8 +33,8 @@ describe('Верификации', () => {
 
             cy.log('Выбрать специальность');
             cy.get('.desktop-modal__content > .student-form > .choose-specialty > [data-v-0dbb9e5f=""] > .search-input > div.search-input__field > .form-input--text')
-                .type('11.02.08 Средства связи с подвижными объектам')
-                .wait(2000)
+                .type('21.02.06 Информационные системы обеспечения градостроительной деятельности')
+                .wait(1000)
 
             cy.get('.search-input__item')
                 .first()
@@ -54,7 +54,7 @@ describe('Верификации', () => {
 
             cy.log('Год начала обучения')
             cy.get('.desktop-modal__content > .student-form > .student-form__years > :nth-child(2) > .form-control--max > .form-input--number')
-                .type('2034')
+                .type('2077')
 
 
         })
