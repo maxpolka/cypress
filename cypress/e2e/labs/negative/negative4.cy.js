@@ -6,13 +6,13 @@ describe('Верификации', () => {
             cy.log('Переход на страницу авторизации')
             cy.visit(data.login_url)
 
-            cy.log('Ввод некорректного логина');
+            cy.log('Ввод корректного логина');
             cy.get('.form-input--text')
-                .type(data.login4)
+                .type(data.login2)
 
-            cy.log('Ввод некорректного пароля');
+            cy.log('Ввод корректного пароля');
             cy.get('.form-input--password')
-                .type(data.password4)
+                .type(data.password)
 
             cy.log('Клик по кнопке "Войти"')
             cy.get(':nth-child(3) > .button')
